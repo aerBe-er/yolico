@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ZN-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>小站</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./assets/flat-ui.min.css">
+    <link rel="stylesheet" href="./assets/waifu.css" />
+</head>
+
+<body class="home">
+    <!-- ********container部分****** -->
+    <div class="header w">
+        <h1 class="logo">
+            <a href="index.html">
+                首页
+            </a>
+        </h1>
+        <i class="list_icon"><img src="./images/header.png" alt=""></i>
+        <ul class="header_nav">
+            <li>
+                <span class="glyphicon glyphicon-home"></span>
+                首页
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-heart-empty"></span>
+                收藏
+            </li>
+            <li id="strategy">
+                <span class="glyphicon glyphicon-question-sign"></span>
+                攻略
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-list-alt"></span>
+                新闻
+            </li>
+        </ul>
+        <form action="">
+            <div class="search">
+                <input type="text" placeholder="搜索..." class="add">
+                <i><button>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </i>
+            </div>
+        </form>
+    </div>
+    <!-- ********banner部分****** -->
+    <div class="banner w">
+        <i>
+            <img src="./images/mv_petal.png" alt="">
+        </i>
+        <div class="banner_center">
+        </div>
+
+    </div>
+    <!-- ********content部分****** -->
+    <div class="content w ">
+        <div class="icon">
+            <img src="./images/header_nav.png" alt="">
+        </div>
+        <h3>最近更新 <span class="
+            glyphicon glyphicon-forward"></span></h3>
+        <div class="content_box clearfix">
+            <ul>
+                <li>
+                    <a href="javascript:;"></a>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- 用户登录区域 -->
+        <form action="">
+            <div class="login">
+                <h5>请登录</h5>
+                <div class="user">
+                    <span class="glyphicon glyphicon-user"></span><input type="text">
+                </div>
+                <div class="psd">
+                    <span class="glyphicon glyphicon-lock"></span><input type="password" name="" id="">
+                </div>
+                <div class="rember">
+                    <input type="checkbox" name="" id=""><span>记住我的登录信息</span>
+                </div>
+                <div class="btn">
+                    <button>登录</button>
+                    <button>注册</button>
+                </div>
+
+            </div>
+        </form>
+        <!-- 热度排行区域 -->
+        <div class="heat">
+            
+        </div>
+        <!-- &&&&&&主体内容区&&&&&&& -->
+        <div class="content_contents">
+            <div class="content_item">
+                <h4>今天Node.js学完了</h4>
+                <img src="./images/ca3.webp" alt="">
+            </div>
+            <div class="content_item">
+                <h4>git分布式开发控制</h4>
+                <img src="./images/listen.jpg" alt="">
+            </div>
+            <div class="content_item">
+                <h4>远程托管github以及码云</h4>
+                <img src="./images/ca3.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- ***************轮播图********* -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide"><img src="./images/ca1.jpg" alt=""></div> -->
+            <div class="swiper-slide"><img src="./images/listen.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/ca3.webp" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- 看板娘 -->
+
+
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <!-- <script src="assets/jquery-ui.min.js?v=1.12.1"></script> -->
+
+    <div class="waifu">
+        <div class="waifu-tips" style="opacity: 0;"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+         <!-- <div class="waifu-tool">
+                <span class="fui-home"></span>
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-info-circle"></span>
+                <span class="fui-cross"></span>
+            </div> -->
+    </div>
+
+    <script src="assets/waifu-tips.js"></script>
+    <script src="assets/live2d.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 1;                  // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 50;         // 默认材质 ID
+        live2d_settings['modelStorage'] = false;         // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = true;       // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = false;    // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '280x250';        // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '275x60';    // 提示框大小
+        live2d_settings['waifuFontSize'] = '12px';       // 提示框字体
+        live2d_settings['waifuToolFont'] = '16px';       // 工具栏字体
+        live2d_settings['waifuToolLine'] = '20px';       // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-20px';       // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+        /* 在 initModel 前添加 */
+        initModel('./assets/waifu-tips.json')
+        // 轮播图
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+    <script src="./js/Sakura.js"></script>
+    <script src="./js/velocity.min.js"></script>
+    <script src="./js/modernizr.js"></script>
+</body>
+
+
+</html>

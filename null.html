@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这里没有内容哦</title>
+    <style>
+        div {
+            width: 500px;
+            margin: 100px auto;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>主人很懒,这个页面暂时没有内容.........</p>
+        <span>5秒后返回主页........</span><a href="./index.html">或者点击此处返回</a>
+
+    </div>
+    <script>
+        var span = document.querySelector('span');
+        var num = 5;
+        star();
+        var timer = setInterval(function () {
+            star();
+        }, 1000)
+        function star() {
+
+            if (num == 0) {
+                location.href = 'index.html';
+                clearInterval(timer)
+            } else {
+                span.innerHTML = num + '秒后返回主页........';
+            }
+            num--;
+        }
+    </script>
+</body>
+
+</html>
